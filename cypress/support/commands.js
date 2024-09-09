@@ -26,7 +26,7 @@
 
 import login from "../fixtures/login.json"
 
-Cypress.Commands.add("creatToken", () => {
+Cypress.Commands.add("createToken", () => {
     cy.request({
         method: "POST",
         url: "/auth",
@@ -35,5 +35,4 @@ Cypress.Commands.add("creatToken", () => {
         expect(status).to.eql(200);
         Cypress.env("token", body.token)
     });
-
 });
